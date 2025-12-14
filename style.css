@@ -1,0 +1,237 @@
+/* Import a modern, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+/* --- Variables --- */
+:root {
+    --bg-dark: #817b7b;
+    --bg-medium: gray;
+    --primary-color: #E8C547; /* Rich Gold/Amber */
+    --text-light: #E0E0E0;
+    --text-muted: #A0A0A0;
+    --section-bg: #121212; /* Slightly lighter than dark for sections */
+}
+
+/* --- Base Styling --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7; /* Increased line-height for better readability */
+    text-align: center;
+}
+
+
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none; /* Removed underline on hover for a cleaner look */
+}
+
+h1, h2 {
+    font-weight: 700; /* Bolder headings */
+    color: var(--primary-color);
+    margin-top: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+h1 {
+    font-size: 3rem; /* Slightly larger heading */
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+}
+
+/* --- Header / Hero Section --- */
+.hero {
+    background: var(--bg-medium);
+    padding: 70px 20px 40px; /* Adjusted padding */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s; /* Animation */
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.role {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 18px;
+    color: var(--text-light);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1); /* Lift effect */
+}
+
+/* --- Section Styling --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-padding {
+    padding: 40px;
+    margin-bottom: 30px;
+    background: var(--section-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(232, 197, 71, 0.1); /* Subtle gold glow */
+    transition: transform 0.5s ease-out, opacity 0.5s;
+    /* You can use JavaScript to apply an 'active' class for a cool scroll-in effect: */
+    /* opacity: 0; */
+    /* transform: translateY(20px); */
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+h2 .fas, h2 .fa-code, h2 .fa-laptop-code, h2 .fa-id-badge {
+    color: var(--primary-color); /* Icons match primary color */
+    margin-right: 10px;
+}
+
+.separator {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 30px;
+    border-radius: 2px;
+}
+
+/* --- Content Lists --- */
+.about-me p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify; /* Justified text for a professional document feel */
+    text-align-last: center; /* Center the last line */
+}
+
+
+.skills-list, .projects-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.05rem;
+}
+
+.skills-list li {
+    background: var(--bg-dark);
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill shape */
+    border: 1px solid var(--text-muted);
+    font-weight: 400;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.skills-list li:hover {
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border-color: var(--primary-color);
+    font-weight: 600;
+}
+
+.projects-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-list li {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    padding: 5px;
+}
+
+.projects-list .fa-check-circle {
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+/* --- Contact Section --- */
+.contact-details p {
+    margin: 15px 0;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.contact-details a {
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--bg-medium);
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    border-top: 3px solid var(--primary-color);
+}
+
+footer .fa-heart {
+    color: #e74c3c; /* A nice red for the heart */
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+    
+    .section-padding {
+        padding: 30px 15px;
+        margin-bottom: 20px;
+    }
+
+    .skills-list {
+        gap: 10px;
+    }
+}
